@@ -21,7 +21,7 @@ const Header = ({ wallpaper }) => {
                     {wallpaper.media_type.toUpperCase()}
                 </p>
             </div>
-            <Link className='px-10 py-3 mt-5 bg-violet-400 rounded font-semibold w-fit'>Watch Now</Link>
+            <Link className='px-10 py-3 mt-5 bg-violet-500 hover:bg-zinc-200 hover:text-violet-600 transition-all rounded font-semibold w-fit'>Watch Now</Link>
         </div>
     )
 }
