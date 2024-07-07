@@ -3,6 +3,10 @@ import { Route, Routes } from 'react-router-dom'
 import HomeLayout from '../Components/Layout/HomeLayout'
 import TrendingLayout from '../Components/Layout/TrendingLayout'
 import Loading from '../Components/partials/Loading'
+import MovieLayout from '../Components/Layout/MovieLayout'
+import PeopleLayout from '../Components/Layout/PeopleLayout'
+import TvLayout from '../Components/Layout/TvLayout'
+import PoplarLayout from '../Components/Layout/PoplarLayout'
 
 const Mainroutes = () => {
   return (
@@ -10,6 +14,10 @@ const Mainroutes = () => {
         <Routes>
             <Route path="/" element={<HomeLayout />} />
             <Route path='/trending' element={<TrendingLayout/>} />
+            <Route path='/movie' element={<MovieLayout/>} />
+            <Route path='/person' element={<PeopleLayout/>} />
+            <Route path='/tv' element={<TvLayout/>} />
+            <Route path='/popular' element={<PoplarLayout/>} />
             <Route path='*' element={<Loading/>} />
         </Routes>
     </>
