@@ -53,7 +53,10 @@ const HomeLayout = () => {
         <HorizontalCards shows={shows} />
       </div>
     </div>
-  ) : <Loading trending={getWallpaper} />
+  ) : <div className='p-10'>
+    <Loading />
+  </div>
 }
 
-export default HomeLayout
+
+  export default HomeLayout
