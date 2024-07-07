@@ -48,7 +48,7 @@ const HomeLayout = () => {
         <Header wallpaper={wallpaper} />
         <div className="flex mt-7 items-center justify-between mb-5">
           <h1 className=' text-2xl font-semibold text-white'>Trending</h1>
-          <FilterTrending title={'Filter'} option={['all', 'movie', 'person', 'tv']} category={category} setcategory={setcategory} />
+          <FilterTrending title={'Filter'} option={['all', 'movie', 'person', 'tv']} state={category} setstate={setcategory} />
         </div>
         <HorizontalCards shows={shows} />
       </div>
