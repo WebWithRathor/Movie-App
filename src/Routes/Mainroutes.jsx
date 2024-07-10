@@ -10,6 +10,7 @@ import PoplarLayout from '../Components/Layout/PoplarLayout'
 import MovieDetails from '../Components/Layout/MovieDetails'
 import TvDetails from '../Components/Layout/TvDetails'
 import PeopleDetails from '../Components/Layout/PeopleDetails'
+import Trailer from '../Components/partials/Trailer'
 
 const Mainroutes = () => {
   return (
@@ -18,9 +19,13 @@ const Mainroutes = () => {
             <Route path="/" element={<HomeLayout />} />
             <Route path='/trending' element={<TrendingLayout/>} />
             <Route path='/movie' element={<MovieLayout/>} />
-            <Route path='/movie/details/:id' element={<MovieDetails/>} />
-            <Route path='/person/details/:id' element={<PeopleDetails/>} />
-            <Route path='/tv/details/:id' element={<TvDetails/>} />
+            <Route path='/movie/details/:id' element={<MovieDetails/>} >
+              <Route path='trailer/:trailerId' element={<Trailer/>} />
+            </Route>
+            <Route path='/person/detail/:id' element={<PeopleDetails/>} />
+            <Route path='/tv/details/:id' element={<TvDetails/>} >
+              <Route path='trailer/:trailerId' element={<Trailer/>} />
+            </Route>
             <Route path='/person' element={<PeopleLayout/>} />
             <Route path='/tv' element={<TvLayout/>} />
             <Route path='/popular' element={<PoplarLayout/>} />
