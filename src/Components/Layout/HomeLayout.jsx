@@ -26,7 +26,6 @@ const HomeLayout = () => {
   const getCategory = async () => {
     try {
       const { data } = await instance.get(`/trending/${category}/day`);
-      console.log(data);
       setshows(data.results);
     } catch (error) {
       console.log(error);
