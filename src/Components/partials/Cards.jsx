@@ -2,7 +2,6 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 
 const Cards = ({ media }) => {
-    console.log(media);
     return (
         <div className="flex flex-wrap justify-evenly gap-y-8 py-10">
             {media.map((show, i) => <Link to={`/${show.media_type}/details/${show.id}`} className='w-[22vw] relative h-[40vh] bg-gradient-to-tr from-gray-800 to-gray-950 rounded-lg' key={i}>
