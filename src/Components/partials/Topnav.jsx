@@ -11,7 +11,6 @@ const Topnav = () => {
     try {
       const { data } = await instance.get(`/search/multi?include_adult=false&language=en-US&page=1&query=${query}`)
       setresults(data.results)
-      console.log(data.results[3]);
     } catch (error) {
       console.log(error);
     }
