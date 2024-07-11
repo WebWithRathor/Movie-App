@@ -6,7 +6,7 @@ import InfiniteScroller from 'react-infinite-scroll-component'
 
 
 
-const InfiniteScroll = ({getTrending,hasMore,media}) => {
+const InfiniteScroll = ({getTrending,hasMore,media,media_type}) => {
   return (
     <InfiniteScroller
         dataLength={media.length}
@@ -14,7 +14,7 @@ const InfiniteScroll = ({getTrending,hasMore,media}) => {
         hasMore={hasMore}
         loader={<Loading />}
       >
-        <Cards media={media} />
+        <Cards media={media} media_type={media_type} />
       </InfiniteScroller>
   )
 }
