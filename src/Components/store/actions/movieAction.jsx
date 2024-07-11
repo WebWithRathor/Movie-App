@@ -1,5 +1,6 @@
 import instance from "../../utils/axios";
 import { loadDetails } from "../reducers/movieSlice";
+export {removeDetails} from '../reducers/movieSlice'
 
 
 
