@@ -50,7 +50,7 @@ const TvLayout = () => {
                     <FilterTrending state={category} setstate={setcategory} title={'Filter'} option={['airing_today', 'on_the_air', 'popular','top_rated']} />
                 </div>
             </div>
-            <InfiniteScroll getTrending={getTv} hasMore={hasMore} media={media} />
+            <InfiniteScroll media_type='tv' getTrending={getTv} hasMore={hasMore} media={media} />
         </div>
     )
 }

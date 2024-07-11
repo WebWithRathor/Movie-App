@@ -45,7 +45,7 @@ const PeopleLayout = () => {
         <Link className='pt-4 flex gap-3 font-semibold text-xl text-zinc-200 items-center' to='/'><i className="ri-arrow-left-line mt-1"></i> Movie</Link>
         <Topnav />
       </div>
-      <InfiniteScroll getTrending={getPerson} hasMore={hasMore} media={media} />
+      <InfiniteScroll media_type='person'  getTrending={getPerson} hasMore={hasMore} media={media} />
     </div>
   )
 }
