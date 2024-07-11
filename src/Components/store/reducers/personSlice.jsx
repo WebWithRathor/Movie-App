@@ -7,8 +7,15 @@ const initialState = {
 const personSlice = createSlice({
     initialState,
     name: "persons",
-    reducers: {}
+    reducers: {
+        loadPersonDetails : (state,action)=>{
+            state.personDetails = action.payload;
+        },
+        removePersonDetails : (state,action)=>{
+            state.personDetails = {};
+        }
+    }
 })
 
 export default personSlice.reducer;
-export const {} = personSlice.actions;
+export const {removePersonDetails,loadPersonDetails} = personSlice.actions;

@@ -22,7 +22,7 @@ const Mainroutes = () => {
             <Route path='/movie/details/:id' element={<MovieDetails/>} >
               <Route path='trailer/:trailerId' element={<Trailer/>} />
             </Route>
-            <Route path='/person/detail/:id' element={<PeopleDetails/>} />
+            <Route path='/person/details/:id' element={<PeopleDetails/>} />
             <Route path='/tv/details/:id' element={<TvDetails/>} >
               <Route path='trailer/:trailerId' element={<Trailer/>} />
             </Route>
