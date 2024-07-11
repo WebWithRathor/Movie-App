@@ -10,9 +10,12 @@ const movieSlice = createSlice({
     reducers: {
         loadDetails : (state,action)=>{
             state.movieDetails = action.payload;
+        },
+        removeDetails : (state,action)=>{
+            state.movieDetails = {};
         }
     }
 })
 
 export default movieSlice.reducer;
-export const {loadDetails} = movieSlice.actions;
+export const {loadDetails,removeDetails} = movieSlice.actions;
