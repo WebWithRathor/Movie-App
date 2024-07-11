@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { details } from '../store/actions/movieAction';
+import { details, removeDetails } from '../store/actions/movieAction';
 import { Link, Outlet, useNavigate, useParams } from 'react-router-dom';
 import HorizontalCards from '../partials/HorizontalCards';
 import Details from '../partials/Details';
@@ -12,6 +12,8 @@ const MovieDetails = () => {
   const movie = useSelector(store => store.movieSlice);
   useEffect(() => {
     dispatch(details(id));
+
+    return () => dispatch(removeDetails())
   }, [id]);
 
 
@@ -30,15 +32,17 @@ const MovieDetails = () => {
       </div>
 
     </nav>
-    <Details Data={movie} />
+    <Details Data={movie.movieDetails} />
     <h1 className='mb-5 mt-10 w-full font-semibold text-lg'>Similar:</h1>
     <HorizontalCards media_type='movie' shows={movie.movieDetails.similar} />
     <Outlet/>
   </div>
     : <div className='p-20'>
-      <div className="hero h-[50vh] w-full bg-gray-600 animate-pulse"></div>
-      <div className="hero mt-10 rounded h-[10vh] w-1/2 bg-gray-600 animate-pulse"></div>
-      <div className="hero mt-10 rounded h-[20vh] w-full bg-gray-600 animate-pulse"></div>
+      <div className="hero h-[55vh] w-full rounded-lg bg-gray-600 animate-pulse"></div>
+      <div className="hero mt-5 rounded-lg h-[15vh] w-1/2 bg-gray-600 animate-pulse"></div>
+      <div className="hero mt-5 rounded-lg h-[2vh] w-full bg-gray-600 animate-pulse"></div>
+      <div className="hero mt-3 rounded-lg h-[2vh] w-full bg-gray-600 animate-pulse"></div>
+      <div className="hero mt-3 rounded-lg h-[2vh] w-full bg-gray-600 animate-pulse"></div>
     </div>
 
 }

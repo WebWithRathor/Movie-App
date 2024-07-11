@@ -49,7 +49,7 @@ const MovieLayout = () => {
           <FilterTrending state={category} setstate={setcategory} title={'Filter'} option={['now_playing', 'popular', 'top_rated','upcoming']} />
         </div>
       </div>
-      <InfiniteScroll getTrending={getMovie} hasMore={hasMore} media={media} />
+      <InfiniteScroll media_type='movie' getTrending={getMovie} hasMore={hasMore} media={media} />
     </div>
   )
 }
