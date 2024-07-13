@@ -1,19 +1,20 @@
 import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { Outlet, useParams } from 'react-router-dom';
-import { LoadTvDetails} from '../store/actions/tvAction';
+import { Outlet, useNavigate, useParams } from 'react-router-dom';
+import { LoadTvDetails, removeTvDetails} from '../store/actions/tvAction';
 import Details from '../partials/Details';
 import HorizontalCards from '../partials/HorizontalCards';
 
 const TvDetails = () => {
   const {id} = useParams();
+  const navigate = useNavigate();
   const tv = useSelector(store => store.tvSlice.tvDetails);
   const dispatch = useDispatch();
   useEffect(()=>{
     dispatch(LoadTvDetails(id))
+    return ()=> dispatch(removeTvDetails())
   },[])
 
-  if(tv.details) console.log(tv);
 
   return ( tv.details  ? <div className='h-full pb-5 px-20 w-full relative text-white z-0'>
   <nav className=' py-7 flex  text-lg justify-between items-center'>
@@ -31,8 +32,8 @@ const TvDetails = () => {
 
   </nav>
   <Details Data={tv} />
-  <h1 className='mb-5 mt-10 w-full font-semibold text-lg'>Similar:</h1>
-  <HorizontalCards media_type='movie' shows={tv.similar} />
+  {tv.similar.length != 0 && <><h1 className='mb-5 mt-10 w-full font-semibold text-lg'>Similar:</h1>
+    <HorizontalCards media_type='movie' shows={tv.similar} /></> }
   <Outlet/>
 </div>
   : <div className='p-20'>

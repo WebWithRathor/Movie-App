@@ -10,6 +10,7 @@ const MovieDetails = () => {
   const { id } = useParams();
   const dispatch = useDispatch();
   const movie = useSelector(store => store.movieSlice);
+  console.log(movie);
   useEffect(() => {
     dispatch(details(id));
 

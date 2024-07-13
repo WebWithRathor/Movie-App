@@ -15,22 +15,25 @@ import Trailer from '../Components/partials/Trailer'
 const Mainroutes = () => {
   return (
     <>
-        <Routes>
-            <Route path="/" element={<HomeLayout />} />
-            <Route path='/trending' element={<TrendingLayout/>} />
-            <Route path='/movie' element={<MovieLayout/>} />
-            <Route path='/movie/details/:id' element={<MovieDetails/>} >
-              <Route path='trailer/:trailerId' element={<Trailer/>} />
-            </Route>
-            <Route path='/person/details/:id' element={<PeopleDetails/>} />
-            <Route path='/tv/details/:id' element={<TvDetails/>} >
-              <Route path='trailer/:trailerId' element={<Trailer/>} />
-            </Route>
-            <Route path='/person' element={<PeopleLayout/>} />
-            <Route path='/tv' element={<TvLayout/>} />
-            <Route path='/popular' element={<PoplarLayout/>} />
-            <Route path='*' element={<Loading/>} />
-        </Routes>
+      <Routes>
+        <Route path="/" element={<HomeLayout />} >
+          <Route path='trailer/:trailerId' element={<Trailer />} />
+
+        </Route>
+        <Route path='/trending' element={<TrendingLayout />} />
+        <Route path='/movie' element={<MovieLayout />} />
+        <Route path='/movie/details/:id' element={<MovieDetails />} >
+          <Route path='trailer/:trailerId' element={<Trailer />} />
+        </Route>
+        <Route path='/person/details/:id' element={<PeopleDetails />} />
+        <Route path='/tv/details/:id' element={<TvDetails />} >
+          <Route path='trailer/:trailerId' element={<Trailer />} />
+        </Route>
+        <Route path='/person' element={<PeopleLayout />} />
+        <Route path='/tv' element={<TvLayout />} />
+        <Route path='/popular' element={<PoplarLayout />} />
+        <Route path='*' element={<Loading />} />
+      </Routes>
     </>
   )
 }

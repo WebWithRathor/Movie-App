@@ -16,7 +16,7 @@ const PeopleDetails = () => {
   }, [id])
   console.log(person);
 
-  return person.externalIds &&
+  return person.externalIds ?
     <div className='text-white px-14 w-full'>
       <nav className=' py-7 flex  text-lg justify-between items-center'>
         <div className='flex gap-10 items-center'>
@@ -49,6 +49,10 @@ const PeopleDetails = () => {
       <h1 className="mb-5 text-lg font-semibold">Movies : </h1>
       <HorizontalCards shows={person.credits.cast} />
       </div>
+    </div> : <div className='h-screen w-full p-20 gap-4 flex'>
+    <div className="poster shrink-0 h-[50vh] w-[20vw] bg-gray-700 animate-pulse overflow-hidden rounded-lg"></div>
+    <div className="poster shrink-0 h-[80vh] w-[70vw] bg-gray-700 animate-pulse overflow-hidden rounded-lg"></div>
+
     </div>
 }
 

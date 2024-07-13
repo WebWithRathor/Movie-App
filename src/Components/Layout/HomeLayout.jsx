@@ -18,6 +18,8 @@ const HomeLayout = () => {
       const { data } = await instance('/trending/all/day');
       let random = (Math.random() * data.results.length).toFixed()
       setwallpaper(data.results[random])
+      const video = (await instance.get(`/movie/${data.results[random].id}/videos`)).data.results.find(e=>e.type === "Trailer");
+      console.log(video);
     } catch (error) {
       console.log(error);
     }
