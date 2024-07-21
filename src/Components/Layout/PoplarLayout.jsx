@@ -6,6 +6,7 @@ import InfiniteScroll from '../partials/InfiniteScroll';
 import instance from '../utils/axios';
 
 const PoplarLayout = () => {
+  document.title = 'Populars';
 
     const [category, setcategory] = useState('movie');
     const [media, setMedia] = useState([])

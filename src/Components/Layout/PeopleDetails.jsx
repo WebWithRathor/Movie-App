@@ -5,6 +5,8 @@ import { useNavigate, useParams } from 'react-router-dom';
 import HorizontalCards from '../partials/HorizontalCards';
 
 const PeopleDetails = () => {
+  document.title = 'People Details';
+
   const { id } = useParams();
   const navigate = useNavigate();
   const dispatch = useDispatch();

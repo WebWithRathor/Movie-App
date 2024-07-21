@@ -6,6 +6,8 @@ import Details from '../partials/Details';
 import HorizontalCards from '../partials/HorizontalCards';
 
 const TvDetails = () => {
+  document.title = 'Tv Details';
+
   const {id} = useParams();
   const navigate = useNavigate();
   const tv = useSelector(store => store.tvSlice.tvDetails);

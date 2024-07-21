@@ -6,6 +6,7 @@ import InfiniteScroll from '../partials/InfiniteScroll';
 import instance from '../utils/axios';
 
 const TvLayout = () => {
+    document.title = 'Tv shows';
 
     const [category, setcategory] = useState('airing_today');
     const [media, setMedia] = useState([])

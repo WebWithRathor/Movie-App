@@ -6,6 +6,7 @@ import InfiniteScroll from '../partials/InfiniteScroll';
 import instance from '../utils/axios';
 
 const PeopleLayout = () => {
+  document.title = 'Peoples';
 
     const [media, setMedia] = useState([])
     const [page, setpage] = useState(1)

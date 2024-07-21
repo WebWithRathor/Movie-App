@@ -6,6 +6,8 @@ import InfiniteScroll from '../partials/InfiniteScroll';
 import instance from '../utils/axios';
 
 const MovieLayout = () => {
+  document.title = 'Movie';
+
     const [category, setcategory] = useState('now_playing');
     const [media, setMedia] = useState([])
     const [page, setpage] = useState(1)

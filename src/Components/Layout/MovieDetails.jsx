@@ -6,6 +6,7 @@ import HorizontalCards from '../partials/HorizontalCards';
 import Details from '../partials/Details';
 
 const MovieDetails = () => {
+  document.title = 'Movie Details';
   const navigate = useNavigate()
   const { id } = useParams();
   const dispatch = useDispatch();

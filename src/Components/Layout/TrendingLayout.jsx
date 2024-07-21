@@ -6,6 +6,7 @@ import instance from '../utils/axios'
 import InfiniteScroll from '../partials/InfiniteScroll'
 
 const TrendingLayout = () => {
+  document.title = 'Trendings';
 
   const [duration, setduration] = useState('day');
   const [category, setcategory] = useState('all');
