@@ -30,7 +30,7 @@ const Details = ({ Data }) => {
         <>
           <h1 className='font-semibold text-xl mb-3'>Seasons :</h1>
           <div className="flex gap-4 overflow-x-auto w-full pb-3">
-            {Data.details.seasons && Data.details.seasons.map((e, i) => <div key={i} className='shrink-0 pb-1 w-[25vw] rounded-lg overflow-hidden bg-gray-800'>
+            {Data.details.seasons && Data.details.seasons.map((e, i) => <div key={i} className='shrink-0 pb-1 md:w-[25vw] rounded-lg overflow-hidden bg-gray-800'>
               <img className='h-48 w-full object-cover object-left-top ' src={e.poster_path ? `https://image.tmdb.org/t/p/original${e.poster_path}` : 'https://as1.ftcdn.net/v2/jpg/05/03/24/40/1000_F_503244059_fRjgerSXBfOYZqTpei4oqyEpQrhbpOML.jpg'} alt="" />
               <h1 className='p-1.5 pr-3 flex justify-between w-full'><span className='px-2 font-semibold'>{e.name.trim()}</span>Episodes : {e.episode_count} </h1>
             </div>)}

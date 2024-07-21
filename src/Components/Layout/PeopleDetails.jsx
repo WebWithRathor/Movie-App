@@ -18,8 +18,8 @@ const PeopleDetails = () => {
 
   return person.externalIds ?
     <div className='text-white px-14 w-full'>
-      <nav className=' py-7 flex  text-lg justify-between items-center'>
-        <div className='flex gap-10 items-center'>
+      <nav className='py-7 flex md:flex-row flex-col gap-5 items-start  text-lg justify-between md:items-center'>
+        <div className='flex  gap-10 items-center'>
           <i onClick={() => navigate(-1)} className="cursor-pointer ri-arrow-left-line text-xl hover:text-violet-300"></i>
           <a className='hover:text-violet-300' target='_blank' href={`${person.externalIds && person.externalIds.imdb_id ? `https://www.imdb.com/name/${person.externalIds.imdb_id}` : ''} `}><h1 className={`${person.externalIds && person.externalIds.imdb_id && person.externalIds.imdb_id.length === 0 ? 'hidden' : ''}`}>imdb</h1></a>
           <a className='hover:text-violet-300' target='_blank' href={`${person.externalIds && person.externalIds.wikidata_id && person.externalIds.wikidata_id.length != 0 ? `https://www.wikidata.org/wiki/${person.externalIds.wikidata_id}` : ''}`}><h1 className={`${person.externalIds && person.externalIds.wikidata_id && person.externalIds.wikidata_id.length === 0 ? 'hidden' : ''}`}><i className="ri-global-line"></i></h1></a>
@@ -32,8 +32,8 @@ const PeopleDetails = () => {
         </div>
       </nav>
 
-      <div className="flex gap-10 pt-10 mb-10">
-        <div className="poster shrink-0 h-[50vh] w-[20vw] overflow-hidden rounded-lg">
+      <div className="flex flex-col md:flex-row gap-10 pt-10 mb-10">
+        <div className="poster shrink-0 h-[50vh] w-full md:w-[20vw] overflow-hidden rounded-lg">
           <img className='h-full hover:scale-110 transition-all duration-300 w-full object-cover' src={person.personDetail.profile_path ? `https://image.tmdb.org/t/p/original${person.personDetail.profile_path}` : 'https://as1.ftcdn.net/v2/jpg/05/03/24/40/1000_F_503244059_fRjgerSXBfOYZqTpei4oqyEpQrhbpOML.jpg'} alt="" />
         </div>
         <div>
@@ -49,9 +49,9 @@ const PeopleDetails = () => {
       <h1 className="mb-5 text-lg font-semibold">Movies : </h1>
       <HorizontalCards shows={person.credits.cast} />
       </div>
-    </div> : <div className='h-screen w-full p-20 gap-4 flex'>
-    <div className="poster shrink-0 h-[50vh] w-[20vw] bg-gray-700 animate-pulse overflow-hidden rounded-lg"></div>
-    <div className="poster shrink-0 h-[80vh] w-[70vw] bg-gray-700 animate-pulse overflow-hidden rounded-lg"></div>
+    </div> : <div className='h-full w-full p-5 md:p-20 gap-4 flex flex-col md:flex-row'>
+    <div className="poster shrink-0 h-[50vh] w-full md:w-[20vw] bg-gray-700 animate-pulse overflow-hidden rounded-lg"></div>
+    <div className="poster shrink-0 h-[80vh] w-full nd:w-[70vw] bg-gray-700 animate-pulse overflow-hidden rounded-lg"></div>
 
     </div>
 }

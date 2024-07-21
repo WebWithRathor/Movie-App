@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 
 const Sidenav = () => {
   return (
-    <div className='w-full h-screen  text-white border-r-2'>
+    <div className='w-full md:h-screen h-max  text-white border-r-2'>
       <h1 className='text-4xl italic tracking-wider text-violet-300 px-6 pt-8 font-serif'>StreamDev</h1>
       <ul className='mt-8'>
         <h1 className='w-full inline-block py-3 px-6 text-xl border-b font-semibold  transition-all '>New feeds</h1>

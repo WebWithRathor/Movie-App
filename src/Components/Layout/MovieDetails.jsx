@@ -18,8 +18,8 @@ const MovieDetails = () => {
   }, [id]);
 
 
-  return movie.movieDetails.details ? <div className='h-full pb-5 px-20 w-full relative text-white z-0'>
-    <nav className=' py-7 flex  text-lg justify-between items-center'>
+  return movie.movieDetails.details ? <div className='h-full pb-5 px-10 md:px-20 w-full relative text-white z-0'>
+    <nav className='py-7 flex md:flex-row flex-col gap-5 items-start  text-lg justify-between md:items-center'>
       <div className='flex gap-10 items-center'>
         <i onClick={() => navigate(-1)} className="cursor-pointer ri-arrow-left-line text-xl hover:text-violet-300"></i>
         <a className='hover:text-violet-300' target='_blank' href={`${movie.movieDetails.externalIds.imdb_id ? `https://www.imdb.com/title/${movie.movieDetails.externalIds.imdb_id}` : ''} `}><h1>imdb</h1></a>

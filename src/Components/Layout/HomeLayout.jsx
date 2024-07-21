@@ -40,11 +40,11 @@ const HomeLayout = () => {
 
 
   return wallpaper ? (
-    <div className='h-full w-full flex '>
-      <div className='h-full w-1/5 '>
+    <div className='md:h-full h-max w-full flex md:flex-row flex-col'>
+      <div className='md:h-full md:w-1/5 h-max w-full '>
         <Sidenav />
       </div>
-      <div className="h-full right w-4/5 p-4 overflow-y-auto">
+      <div className="h-full right w-full md:w-4/5 p-4 overflow-y-auto">
         <Topnav />
         <Header wallpaper={wallpaper} />
         <div className="flex mt-7 items-center justify-between mb-5">

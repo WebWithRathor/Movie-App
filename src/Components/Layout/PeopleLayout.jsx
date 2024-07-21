@@ -41,8 +41,8 @@ const PeopleLayout = () => {
 
   return (
     <div className='h-full w-full'>
-      <div className="flex px-10 w-full items-center pt-5">
-        <Link className='pt-4 flex gap-3 font-semibold text-xl text-zinc-200 items-center' to='/'><i className="ri-arrow-left-line mt-1"></i> Movie</Link>
+      <div className="flex md:flex-row flex-col px-10 w-full items-center pt-5">
+        <Link className='pt-4 flex gap-3 font-semibold text-xl text-zinc-200 items-center' to='/'><i className="ri-arrow-left-line mt-1"></i>People</Link>
         <Topnav />
       </div>
       <InfiniteScroll media_type='person'  getTrending={getPerson} hasMore={hasMore} media={media} />
