@@ -8,7 +8,7 @@ import FilterTrending from '../partials/FilterTrending'
 import Loading from '../partials/Loading'
 
 const HomeLayout = () => {
-
+document.title = 'Movie App || Devraj Rathor'
   const [wallpaper, setwallpaper] = useState(null)
   const [category, setcategory] = useState('all')
   const [shows, setshows] = useState([])
